@@ -1,12 +1,17 @@
-<h1>Posts</h1>
 
-<ul>
-  <% @posts.each do |post| %>
-    <li>
-      <%= link_to post.title, post %>
-    </li>
-  <% end %>
-</ul>
+<div class="section">
+  <div class="columns is-mobile">
+    <div class="column is-half is-offset-one-quarter">
+      <h1 class="title is-2">Posts</h1>
+      <% @posts.each do |post| %>
+        <div class="box">
+          <div class="title is-5"><%= post.title %></div>
+          <p class="subtitle is-6">By Albert</p>
+          <p><%= post.body %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<%= link_to "New Post", new_post_path %>
 
