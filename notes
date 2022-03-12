@@ -1,6 +1,0 @@
-Add Rails Bulma gem
-Set up navbar in application.html.erb
-Add placeholder in Posts for name
-Format Posts#index
-Add extra controller for devise - see twitter example
-connect User and Post models
