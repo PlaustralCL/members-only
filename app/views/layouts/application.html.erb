@@ -17,7 +17,7 @@
       </div>
     <% end %>
     <% if flash[:alert] %>
-      <div class="notificatoiin is-danger is-light">
+      <div class="notification is-danger is-light">
         <%= alert %>
       </div>
     <% end %>
@@ -42,7 +42,36 @@
             <%= link_to "New Post",
                         new_post_path,
                         class: "button" %>
+
+            <% if user_signed_in? %>
+              <div class="navbar-item">
+                <%= link_to current_user.name,
+                            root_path,
+                            class: "button has-background-success-dark is-outlined has-text-light"   %>
+              </div>
+
+              <div class="navbar-item">
+                <%= link_to "Sign out",
+                            destroy_user_session_path,
+                            method: :delete,
+                            class: "button has-background-success-dark is-outlined has-text-light" %>
+              </div>
+
+              <% else %>
+                <div class="navbar-item">
+                  <%= link_to "Log in",
+                              new_user_session_path,
+                              class: "button has-background-success-dark is-outlined has-text-light" %>
+                </div>
+                <div class="navbar-item">
+                  <%= link_to "Sign up",
+                              new_user_registration_path,
+                              class: "button has-background-success-dark is-outlined has-text-light" %>
+                </div>
+            <% end %>
           </div>
+
+
         </div>
        </div>
      </div>
