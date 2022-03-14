@@ -1,24 +1,8 @@
-# README
+# Members Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The purpose of this project was to practice using authentication for Ruby on Rails apps, specifically the use of the Devise gem. This is part of [The Odin Project](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/members-only).
 
-Things you may want to cover:
+The quotes used on the heroku app came from [Project Gutenberg](https://www.gutenberg.org/).
 
-* Ruby version
+The live version of the app can be seen at https://vast-plateau-14135.herokuapp.com/
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
