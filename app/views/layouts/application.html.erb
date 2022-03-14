@@ -11,17 +11,6 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
-      <div class="notification is-success is-light">
-        <%= notice %>
-      </div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="notification is-danger is-light">
-        <%= alert %>
-      </div>
-    <% end %>
-
    <nav class="navbar has-background-success-dark">
      <div class="navbar-brand">
       <%= link_to root_path, class: "navbar-item" do %>
@@ -77,6 +66,16 @@
      </div>
    </nav>
 
+    <% if flash[:notice] %>
+      <div class="notification is-success is-light">
+        <%= notice %>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="notification is-danger is-light">
+        <%= alert %>
+      </div>
+    <% end %>
 
     <%= yield %>
   </body>
