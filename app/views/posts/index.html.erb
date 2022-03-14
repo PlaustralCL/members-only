@@ -6,7 +6,12 @@
       <% @posts.each do |post| %>
         <div class="box">
           <div class="title is-5"><%= post.title %></div>
-          <p class="subtitle is-6">By Albert</p>
+
+          <% if user_signed_in? %>
+            <p class="subtitle is-6">
+              <%=  post.user.name %>
+            </p>
+          <% end %>
           <p><%= post.body %></p>
         </div>
       <% end %>
